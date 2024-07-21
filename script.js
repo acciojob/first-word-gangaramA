@@ -1,15 +1,14 @@
 function firstWord(s) {
+    // Trim leading and trailing spaces
+    s = s.trim();
+    
+    // If the string is empty after trimming, return an empty string
     if (s === '') {
         return '';
     }
     
-    const firstSpaceIndex = s.indexOf(' ');
-    
-    if (firstSpaceIndex === -1) {
-        return s;
-    }
-    
-    return s.substring(0, firstSpaceIndex);
+    // Split the string by spaces and return the first element
+    return s.split(/\s+/)[0];
 }
 
 // Do not change the code below
